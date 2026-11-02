@@ -1,0 +1,75 @@
+###
+POST http://127.0.0.1:8000/api/hotels/
+Content-Type: application/json
+
+{
+    "name": "Grand Palace Hotel",
+    "location": "Kannur",
+    "phone": "9876543210",
+    "email": "grandpalace@gmail.com",
+    "description": "Luxury hotel with excellent facilities",
+    "rating": 4.5
+}
+
+
+### 
+GET http://127.0.0.1:8000/api/hotels/
+
+
+### 
+GET http://127.0.0.1:8000/api/hotels/1/
+
+
+### 
+PUT http://127.0.0.1:8000/api/hotels/1/
+Content-Type: application/json
+
+{
+    "name": "Grand Palace Resort",
+    "location": "Kochi",
+    "phone": "9876543210",
+    "email": "grandpalace@gmail.com",
+    "description": "Premium hotel and resort",
+    "rating": 5
+}
+
+
+### 
+DELETE http://127.0.0.1:8000/api/hotels/1/
+
+
+### 
+POST http://127.0.0.1:8000/api/rooms/
+Content-Type: application/json
+
+{
+    "hotel_id": 1,
+    "room_number": "101",
+    "room_type": "Deluxe",
+    "price": 2500,
+    "capacity": 2,
+    "is_available": true
+}
+
+
+### 
+GET http://127.0.0.1:8000/api/rooms/
+
+
+###
+POST http://127.0.0.1:8000/api/bookings/
+Content-Type: application/json
+
+{
+    "room_id": 1,
+    "customer_name": "Aswin",
+    "customer_email": "aswin@example.com",
+    "customer_phone": "9876543210",
+    "check_in": "2026-11-10",
+    "check_out": "2026-11-12",
+    "guests": 2
+}
+
+
+### 
+GET http://127.0.0.1:8000/api/bookings/
